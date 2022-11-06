@@ -1,7 +1,11 @@
 import pandas as pd 
-import seaborn as sns
+import matplotlib as mpl
+import matplotlib.pyplot as plt
 
-df = pd.read_csv(r'C:\Users\rmelh\OneDrive\Documents\data_1_check\kc_2\assets\National_Universities_Rankings.csv')
+dataframe = pd.read_csv('National_Universities_Rankings')
 
-sns.scatterplot(x=df['rank'],
-                y=df['tuition_and_fees'])
+Rank = dataframe('Rank')
+Tuition_and_Fees = dataframe('tuition_and_fees')
+
+plt.plot(Rank, Tuition_and_Fees, marker="^")
+plt.show()
